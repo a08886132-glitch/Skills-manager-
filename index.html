@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header class="header">
+            <div>
+                <p class="eyebrow">PERSONAL ORGANIZER</p>
+                <h1>Skills Manager<span>.</span></h1>
+                <p class="subtitle">
+                    Organize your skills, one tag at a time.
+                </p>
+            </div>
+            <div class="header-icon">✳</div>
+        </header>
+
+        <section class="panel">
+            <h2 id="formTitle">Add a new skill</h2>
+
+            <form id="skillForm">
+                <label for="skillInput">Skill name</label>
+
+                <div class="input-row">
+                    <input
+                        type="text"
+                        id="skillInput"
+                        placeholder="e.g. JavaScript"
+                        maxlength="40"
+                        required
+                    >
+                    <button type="submit" id="submitBtn">
+                        + Add Skill
+                    </button>
+                </div>
+
+                <button
+                    type="button"
+                    id="cancelEdit"
+                    class="cancel-btn hidden"
+                >
+                    Cancel editing
+                </button>
+
+                <p id="formMessage" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="skills-section">
+            <div class="section-header">
+                <div>
+                    <h2>Your Skills</h2>
+                    <p>Manage your growing skill collection.</p>
+                </div>
+                <span id="skillCount" class="count">0 skills</span>
+            </div>
+
+            <label for="searchInput" class="search-label">
+                Search skills
+            </label>
+
+            <input
+                type="search"
+                id="searchInput"
+                class="search-input"
+                placeholder="Search by skill name..."
+            >
+
+            <div id="skillsList" class="skills-list"></div>
+
+            <p id="emptyState" class="empty-state">
+                No skills yet. Add your first skill above!
+            </p>
+
+            <p id="noResults" class="empty-state hidden">
+                No matching skills found.
+            </p>
+        </section>
+
+        <footer>
+            Built with HTML, CSS and JavaScript.
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
